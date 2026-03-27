@@ -30,3 +30,8 @@ docker run -d -p 8888:8000 --name arun-python-web python:3.9-slim python3 -m htt
 1. It combines **Networking** (-p)
 2. It combines **Process Management** (-d)
 3. It combines **Software Execution** (python3 -m)
+
+### Phase 3 Mastery: Solving Root Directory Exposure
+**Issue:** Browser showed Linux system folders (.dockerenv, bin, etc) instead of index.html.
+**Cause:** The web server was looking at the Container Root (/) instead of the mapped Volume (/app).
+**Fix:** Use the `--directory /app` argument in the Python command to force the server to look at the correct folder.
