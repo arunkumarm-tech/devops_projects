@@ -1,15 +1,15 @@
-# 🌐 Multi-Cloud & Kubernetes Mastery Plan
+# 🌐 Multi-Cloud & Kubernetes Mastery Plan (AWS + Azure)
 
-### Architecture Strategy:
-- **Infrastructure:** Terraform (AWS + Azure)
+| Milestone | Task | AWS Service | Azure Service | Status |
+| :--- | :--- | :--- | :--- | :--- |
+| **M1** | Compute & Docker | EC2 | Virtual Machine | 🟡 Active |
+| **M2** | Storage | S3 | Blob Storage | ⚪ Pending |
+| **M3** | Networking | VPC | VNet | ⚪ Pending |
+| **M4** | Kubernetes | EKS | AKS | ⚪ Pending |
+| **M5** | CI/CD | GitHub Actions | GitHub Actions | ⚪ Pending |
+
+---
+### 🛠 Multi-Cloud Tooling:
+- **IaC:** Terraform (using 'aws' and 'azurerm' providers)
 - **Containerization:** Docker
-- **Orchestration:** Kubernetes (EKS for AWS / AKS for Azure)
-- **CI/CD:** GitHub Actions
-
-| Milestone | Task | Tools | Status |
-| :--- | :--- | :--- | :--- |
-| **M1** | AWS EC2 & Docker Bootstrap | Terraform, AWS | 🟡 In Progress |
-| **M2** | Azure Resource Group & VM | Terraform, Azure | ⚪ Pending |
-| **M3** | Local Kubernetes Setup | kubectl, Kind/Minikube | ⚪ Pending |
-| **M4** | Helm Charts for Python App | Helm, Kubernetes | ⚪ Pending |
-| **M5** | Multi-Cloud Deployment | GitHub Actions | ⚪ Pending |
+- **Orchestration:** Kubernetes (EKS & AKS)
