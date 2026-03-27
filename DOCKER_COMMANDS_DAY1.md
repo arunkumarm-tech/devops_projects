@@ -35,3 +35,17 @@ docker run -d -p 8888:8000 --name arun-python-web python:3.9-slim python3 -m htt
 **Issue:** Browser showed Linux system folders (.dockerenv, bin, etc) instead of index.html.
 **Cause:** The web server was looking at the Container Root (/) instead of the mapped Volume (/app).
 **Fix:** Use the `--directory /app` argument in the Python command to force the server to look at the correct folder.
+
+## Phase 4: Dockerfiles (Custom Images)
+| Instruction | Purpose |
+| :--- | :--- |
+| `FROM` | Defines the base Operating System/Language (e.g., python:3.9-slim). |
+| `WORKDIR` | Sets the home folder for all following commands. |
+| `COPY` | Moves files from your MacBook into the Docker Image. |
+| `CMD` | The final command that runs when the container starts. |
+
+### The Build Command:
+```bash
+docker build -t arun-custom-app:v1.0 .
+```
+**Key Lesson:** Building an image makes your application portable. You can send this image to a colleague at HCL or IBM, and it will run exactly the same for them.
