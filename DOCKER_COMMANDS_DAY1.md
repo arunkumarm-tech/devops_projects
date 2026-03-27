@@ -20,3 +20,13 @@
 | `localhost:8888` | The address used in the browser to reach the isolated container. |
 
 **Key Lesson:** Without the -p flag, the container is invisible to the outside world.
+
+### Phase 2: Actual Terminal Command
+```bash
+docker run -d -p 8888:8000 --name arun-python-web python:3.9-slim python3 -m http.server 8000
+```
+
+**Why this command is powerful:**
+1. It combines **Networking** (-p)
+2. It combines **Process Management** (-d)
+3. It combines **Software Execution** (python3 -m)
