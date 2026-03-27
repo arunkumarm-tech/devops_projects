@@ -11,3 +11,12 @@
 | `docker run --rm` | The "Master Move" - automatically deletes the container upon exit. |
 
 **Key Lesson:** A container being "Exited" is not the same as being "Deleted."
+
+## Phase 2: Port Mapping (The Bridge)
+| Command Flag | Why we used it |
+| :--- | :--- |
+| `-d` | To run the container in the background (Detached). |
+| `-p 8888:8000` | To map the MacBook's port 8888 to the Container's port 8000. |
+| `localhost:8888` | The address used in the browser to reach the isolated container. |
+
+**Key Lesson:** Without the -p flag, the container is invisible to the outside world.
