@@ -1,3 +1,9 @@
+# 🚀 Multi-Cloud DevSecOps Portfolio
+**Technical Specialist | 12+ Years Experience (HCL, IBM, Cognizant)**
+
+This repository serves as a live lab for my transition into **SRE and DevSecOps**, focusing on high-availability architectures across **AWS and Azure** using **Terraform**, **Docker**, and **Kubernetes**.
+
+---
 # 🐳 Docker Mastery Roadmap
 
 | Phase | Topic | Project | Status |
