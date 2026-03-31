@@ -1,0 +1,24 @@
+version: '3.8'
+services:
+  web-app:
+    build: .
+    ports:
+      - "5001:5000"
+    volumes:
+      - .:/app
+    environment:
+      - REDIS_HOST=redis-db
+    depends_on:
+      - redis-db
+  redis-db:
+    image: "redis:alpine"
+    ports:
+      - "6379:6379"
+
+# NEW LINES BELOW:
+    volumes:
+      - redis_data:/data # This creates a managed "Hard Drive"
+
+# This section defines the "Hard Drive"
+volumes:
+  redis_data:
