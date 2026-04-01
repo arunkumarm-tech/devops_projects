@@ -1,22 +1,22 @@
-# Phase 5 & 6: Multi-Container Networking & Cloud Registry
+# Phase 5 & 6: Multi-Container Networking & Docker Hub
 
-This project demonstrates a production-ready Docker setup using a Python Flask application and a Redis database.
+This project demonstrates a production-grade local development environment using Docker Compose.
 
 ## Architecture
-- **Web App:** Python 3.9-slim running Flask.
-- **Database:** Redis (Alpine-based) for high-speed in-memory caching.
-- **Persistence:** Docker Volumes are used to ensure Redis data survives container restarts.
-- **Networking:** Docker Compose creates a private virtual network for secure service-to-service communication.
+- **Web Tier:** Python 3.9-slim (Flask)
+- **Data Tier:** Redis (Alpine)
+- **Networking:** Private Docker Bridge Network
+- **Persistence:** Docker Managed Volume (redis_data)
 
-## Features
-- **Hot Reloading:** Bind mounts allow for real-time code changes.
-- **Data Persistence:** Managed volumes prevent data loss.
-- **Registry:** Image is pushed to Docker Hub for cloud deployment.
+## Key Commands Used
+- docker-compose up --build -d
+- docker-compose restart web-app
+- docker-compose down
+- docker login
+- docker tag [ID] arunmxbox/my-python-app:v1.0
+- docker push arunmxbox/my-python-app:v1.0
 
-## How to Run
-1. Clone the repo.
-2. Run `docker-compose up -d`.
-3. Access at `http://localhost:5001`.
+## Results
+The application successfully tracks page views. Even after running docker-compose down, the view count is preserved thanks to the persistent Volume mapping.
 
-## Docker Hub
-The image is available at: [hub.docker.com/r/arunmxbox/my-python-app](https://hub.docker.com/r/arunmxbox/my-python-app)
+**Docker Hub Image:** https://hub.docker.com/r/arunmxbox/my-python-app
